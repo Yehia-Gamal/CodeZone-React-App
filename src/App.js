@@ -5,11 +5,9 @@ import Greeting from "./components/Greeting";
 import Header from "./components/Header";
 import Input from "./components/Input";
 import List from "./components/List";
-import Login from "./components/Login";
 import ProductsCard from "./components/ProductsCard";
 import ProductList from "./components/ProductsList";
 import ProductListApi from "./components/ProductsListApi";
-import Slider from "./components/Slider";
 import Welcome from "./components/Welcome";
 import WelcomeFC from "./components/WelcomeFC";
 import Product from "./Product";
@@ -17,20 +15,18 @@ import Product from "./Product";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import ProductDetails from "./components/ProductDetails";
+import FixedComponents from "./components/FixedComponents";
 
 function App() {
 
   return (
     <div className="App d-flex flex-column align-items-center justify-content-center text-center overflow-hidden">
-      <h1>Hello World in React ❤</h1>
-      <Login />
-
-      <Header />
-      <Slider />
 
       <Routes>
+
         <Route path="/" element={
           <>
+            <FixedComponents />
             <Input label="Name" type="text" />
             <Input label="Password" type="password" />
             <Input label="Phone" type="number" />
@@ -41,6 +37,7 @@ function App() {
         <Route path="about" element={<>
 
           <About />
+          <FixedComponents />
           <Button title="Print in Console" />
           <br />
           <List />
@@ -56,6 +53,7 @@ function App() {
 
         <Route path="welcomeFC" element={
           <>
+            <FixedComponents />
             <WelcomeFC name="Yehia" age="26" title="React JS Dev" />
             <br />
             <Greeting />
@@ -65,22 +63,30 @@ function App() {
         }
         />
         <Route path="welcome" element={<>
+          <FixedComponents />
           <Welcome name="Hamada" age="28" title="front end Dev" />
           <Welcome name="Hany" age="38" title="C# Dev" />
         </>} />
 
         <Route path="Products-3" element={<>
+          <FixedComponents />
           <ProductsCard />
         </>} />
 
         <Route path="Products-2" element={<>
+          <FixedComponents />
           <ProductListApi />
         </>} />
 
         <Route path="Products-1" element={<>
+          <FixedComponents />
           <ProductList />
         </>} />
-        <Route path="product/:productId" element={<ProductDetails />} />
+        <Route path="product/:productId" element={<>
+          <Header />
+          <ProductDetails />
+        </>
+        } />
       </Routes>
 
     </div>
