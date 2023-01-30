@@ -52,3 +52,30 @@ nav {
   background-color: teal;
   font-size: 20px;
 }
+
+.sidebar {
+  height: 100vh;
+  background-color: #eee;
+
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: fit-content !important;
+  background-color: #282c34;
+}
+
+.sidebar li {
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.sidebar li a {
+  text-decoration: none;
+}
+
+.home-section {
+  width: 100%;
+  min-height: 100vh;
+  margin-left: 300px;
+  background-color: #fff;
+}

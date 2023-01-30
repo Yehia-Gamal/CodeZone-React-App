@@ -32,6 +32,9 @@ function Header() {
               <li className="nav-item fs-4 m-2 mb-0 mt-0">
                 <NavLink className="nav-link" to="/Products-3">Products 3</NavLink>
               </li>
+              <li className="nav-item fs-4 m-2 mb-0 mt-0">
+                <NavLink className="nav-link" to="/Api">Api</NavLink>
+              </li>
             </ul>
           </div>
         </div>
