@@ -16,9 +16,6 @@ import { Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import ProductDetails from "./components/ProductDetails";
 import FixedComponents from "./components/FixedComponents";
-import Api from "./components/Api";
-import Home from "./Pages/Home";
-import Products from "./Pages/Products";
 
 function App() {
 
@@ -69,15 +66,6 @@ function App() {
           <FixedComponents />
           <Welcome name="Hamada" age="28" title="front end Dev" />
           <Welcome name="Hany" age="38" title="C# Dev" />
-        </>} />
-
-        <Route path="home" element={<Home />} />
-        <Route path="products" element={<Products />} />
-
-        <Route path="Api" element={<>
-          <Header />
-          <Api />
-
         </>} />
 
         <Route path="Products-3" element={<>
